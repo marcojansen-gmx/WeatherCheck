@@ -18,8 +18,6 @@ const updateUI = (data) => {
             <span>&deg;C</span>
         </div>
     `;
-    
-
 };
 
 const updateCity = async (city) => {
