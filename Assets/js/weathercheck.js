@@ -20,12 +20,13 @@ const getCity = async (city) => {
     // fetch resource (city id) and combine base and query together
     const response = await fetch(base + query);
     const data = await response.json();
-
+    console.log(data[0]);
     return data[0];
 };
 
-getCity('Manchester').then(data => {
-     return getWeather(data.Key)   
-    }).then(data => {
-        console.log(data);
-    }).catch(err =>  console.log(err));
+// kan uitvee
+// getCity('Manchester').then(data => {
+//      return getWeather(data.Key)   
+//     }).then(data => {
+//         console.log(data);
+//     }).catch(err =>  console.log(err));
