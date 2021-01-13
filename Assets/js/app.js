@@ -1,5 +1,26 @@
 // Dom Manipulation and other code go here 
 const cityForm = document.querySelector('.enter-location');
+//elements to update main card
+const card = document.querySelector('card');
+const details = document.querySelector('.details')
+
+//func to update  UI
+const updateUI = (data) => {
+    const cityDetails = data.cityDetails;
+    const weatherDetails = data.weatherDetails;
+
+    // update the details on the card 
+    details.innerHTML = `
+        <h5 class="my-3">${cityDetails.EnglishName}</h5>
+        <div class="my-3">${weatherDetails.WeatherText}</div>
+        <div class="display-4 my-4">
+            <span>${weatherDetails.Temperature.Metric.Value}</span>
+            <span>&deg;C</span>
+        </div>
+    `;
+    
+
+};
 
 const updateCity = async (city) => {
     
@@ -19,6 +40,6 @@ cityForm.addEventListener('submit', e => {
     
     //update the User Interface with the new City
     updateCity(city)
-    .then(data => console.log(data))
+    .then(data => updateUI(data))
     .catch(err => console.log(err));
 });
