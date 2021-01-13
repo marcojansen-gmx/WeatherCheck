@@ -29,13 +29,13 @@ const updateUI = (data) => {
   icon.setAttribute('src', iconSrc);
   
   // update the day  or night display
-  let timeSrc = null;
-  if(weatherDetails.IsDayTime){
-    timeSrc = 'Assets/graphics/images/day.svg';
-  } else {
-    timeSrc = 'Assets/graphics/images/night.svg';
-  }
-  time.setAttribute('src', timeSrc);
+  let timeSrc = weatherDetails.IsDayTime ? 'Assets/graphics/images/day.svg' ; 'Assets/graphics/images/night.svg';
+//   if(weatherDetails.IsDayTime){
+//     timeSrc = 'Assets/graphics/images/day.svg';
+//   } else {
+//     timeSrc = 'Assets/graphics/images/night.svg';
+//   }
+//   time.setAttribute('src', timeSrc);
 
   // remove the class of d-none if it is present
   if(card.classList.contains('d-none')){
