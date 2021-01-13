@@ -1,7 +1,7 @@
 // Dom Manipulation and other code go here 
 const cityForm = document.querySelector('.enter-location');
 //elements to update main card
-const card = document.querySelector('card');
+const card = document.querySelector('.card');
 const details = document.querySelector('.details')
 
 //func to update  UI
