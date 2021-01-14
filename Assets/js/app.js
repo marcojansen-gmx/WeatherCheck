@@ -24,6 +24,8 @@ const updateUI = (data) => {
     <span>${weatherDetails.Temperature.Metric.Value}</span>
     <span>&deg;C</span>
     </div>
+    <div class="my-3">HUMIDITY ${weatherDetails.RelativeHumidity}%</div>
+    <div class="my-3">WIND SPEED ${weatherDetails.Wind.Speed.Metric.Value}km/h</div>
     `;
     
     //icon for wesather conditions
