@@ -13,11 +13,14 @@ body{
     border-radius: 50%;
     width: 100px;
     margin-bottom: -50px;
+    z-index: 0;
 }
 .iconUv{
     position: relative;
     top: -100px;
     border-radius: 50%;
-    width: 100px;
+    width: 150px;
+    height: 150px;
     margin-bottom: -50px;
+    background-color: white;
 }

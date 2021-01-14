@@ -26,28 +26,22 @@ const updateUI = (data) => {
     </div>
     `;
     
+    //icon for wesather conditions
     const iconSrc = `Assets/graphics/icons/${weatherDetails.WeatherIcon}.svg`;
     icon.setAttribute('src', iconSrc);
-
-    const iconUvSrc = `Assets/graphics/icons/${weatherDetails.WeatherIcon}.svg`;
-    iconUv.setAttribute('src', iconUvSrc);
-    
+    //icon for UV Index
+    const iconUvSrc = `Assets/graphics/icons/UV/${weatherDetails.UVIndex}.svg`;
+    iconUv.setAttribute('src', iconUvSrc);  
     // update the day  or night display  
     let timeSrc = weatherDetails.IsDayTime ? 'Assets/graphics/images/day.svg' : 'Assets/graphics/images/night.svg';
     time.setAttribute('src', timeSrc);
 
-    // let timeSrc = null;          
-    //   if(weatherDetails.IsDayTime){
-    //         timeSrc = 'Assets/graphics/images/day.svg';
-    //       } else {
-    //             timeSrc = 'Assets/graphics/images/night.svg';
-    //           }
             
-            // remove the class of d-none if it is present
-            if(card.classList.contains('d-none')){
-                card.classList.remove('d-none');
-            }
-        };
+        // remove the class of d-none if it is present
+        if(card.classList.contains('d-none')){
+            card.classList.remove('d-none');
+        }
+};
         
         const updateCity = async (city) => {
             
