@@ -1,10 +1,10 @@
-const key = 'q5Xsdy5sqmdb4MwpDtDT9cpWPAMSRoAy';
+const key = 'lmBgc66jfIQSHGm5tA4HTlUkRJ1Qt2Li';
 
 // function to get current weather information for city
 const getWeather = async (cityKey) => {
   
     const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
-    const query = `${cityKey}?apikey=${key}`;
+    const query = `${cityKey}?apikey=${key}&details=true`;
   
     const response = await fetch(base + query);
     const data = await response.json();
@@ -12,7 +12,7 @@ const getWeather = async (cityKey) => {
     return data[0];
   
   };
-  
+
   // function to get id for city - set city as paramater  - to obtain weather data
   const getCity = async (city) => {
   
