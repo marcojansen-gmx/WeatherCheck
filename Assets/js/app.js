@@ -6,6 +6,7 @@ const details = document.querySelector('.details');
 //graphic elements to be updated
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
+const iconUv = document.querySelector('.iconUv img')
 
 //func to update  UI
 const updateUI = (data) => {
@@ -27,11 +28,14 @@ const updateUI = (data) => {
     
     const iconSrc = `Assets/graphics/icons/${weatherDetails.WeatherIcon}.svg`;
     icon.setAttribute('src', iconSrc);
+
+    const iconUvSrc = `Assets/graphics/icons/${weatherDetails.WeatherIcon}.svg`;
+    iconUv.setAttribute('src', iconUvSrc);
     
     // update the day  or night display  
     let timeSrc = weatherDetails.IsDayTime ? 'Assets/graphics/images/day.svg' : 'Assets/graphics/images/night.svg';
     time.setAttribute('src', timeSrc);
-    
+
     // let timeSrc = null;          
     //   if(weatherDetails.IsDayTime){
     //         timeSrc = 'Assets/graphics/images/day.svg';
