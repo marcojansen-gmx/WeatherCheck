@@ -1,8 +1,10 @@
 // Dom Manipulation and other code go here 
 const cityForm = document.querySelector('.enter-city');
-//elements to update main card
+//elements to update main card and Forecasts Cards
 const card = document.querySelector('.card');
 const details = document.querySelector('.details');
+const forecasts = document.querySelector('.forecasts');
+
 //graphic elements to be updated
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
@@ -14,7 +16,7 @@ const updateUI = (data) => {
     // const weatherDetails = data.weatherDetails;
     
     // destructure properties
-    const { cityDetails, weatherDetails } = data;
+    const { cityDetails, weatherDetails, forecastDetails } = data;
     
     // update the details on the main card
     details.innerHTML = `
@@ -37,6 +39,72 @@ const updateUI = (data) => {
     // update the day  or night display  
     let timeSrc = weatherDetails.IsDayTime ? 'Assets/graphics/images/day.svg' : 'Assets/graphics/images/night.svg';
     time.setAttribute('src', timeSrc);
+    
+    console.log(cityDetails, weatherDetails, forecastDetails, forecastDetails.DailyForecasts[0].Temperature.Maximum.Value, forecastDetails.DailyForecasts[0].Day.Icon, forecastDetails.DailyForecasts[0].Day.Wind.Speed.Value );
+    
+    forecasts.innerHTML = `
+    <div class="col">
+        <div class="forecastsCard h-100">
+            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Date </h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>        
+    <div class="col">
+        <div class="forecastsCard h-100">
+            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Date </h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+    <div class="col">
+        <div class="forecastsCard h-100">
+            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Date </h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+    <div class="col">
+        <div class="forecastsCard h-100">
+            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Date </h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+    <div class="col">
+        <div class="forecastsCard h-100">
+            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Date </h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+    `
+                            
 
             
         // remove the class of d-none if it is present
@@ -50,7 +118,6 @@ const updateUI = (data) => {
             const cityDetails = await getCity(city);
             const weatherDetails = await getWeather(cityDetails.Key);
             const forecastDetails = await getForecast(cityDetails.Key);
-            console.log(cityDetails, weatherDetails, forecastDetails, forecastDetails.DailyForecasts[0].Temperature.Maximum.Value, forecastDetails.DailyForecasts[0].Day.Icon, forecastDetails.DailyForecasts[0].Day.Wind.Speed.Value );
             return { cityDetails, weatherDetails, forecastDetails };
             
         };

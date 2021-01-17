@@ -14,80 +14,151 @@
 </head>
 
 <body>
-    <!-- adding container -->
-    <div class="container my-5 mx-auto g-4">
-        <h1 class="text-muted text-center my-4">Weather Check</h1>
-        
-        <form class="enter-city my-4 text-center text-muted">
-            <label for="city">Enter a city to check the weather</label>
-            <input type="text" name="city" class="form-control p-4">
-        </form>
 
-        <div class="card shadow-lg rounded d-none">
-            <img src="https://via.placeholder.com/400x300" class="time card-img-top">
-            <div class="icon bg-warning mx-auto text-center">
-                <img src="" alt="">
+    <!-- Main Container  -->
+    <div class="container-fluid">
+
+        <!-- First Row  -->
+        <div class="row">
+            <!-- Search History -->
+            <div class="col-md-2">
+                <div class="dropdown">
+
+                    <button class="btn btn-primary dropdown-toggle m-5" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown">
+                        Action
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item disabled" href="#">Action</a> <a class="dropdown-item" href="#">Another
+                            action</a> <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
             </div>
-            <div class="iconUv mx-auto text-center">
-                <img src="" alt="">
+            <!-- Heading, Instruction and Input Field for City -->
+            <div class="enter-city-col col-md-6">
+                <h1 class="text-muted text-center m-5">Weather Check</h1>
+
+                <form class="enter-city my-4 text-center text-muted">
+                    <label for="city">Enter a city to check the weather</label>
+                    <input type="text" name="city" class="form-control p-4">
+                </form>
+
             </div>
-            <!-- container for current weather details -->
-            <div class="text-muted text-uppercase text-center details">
+            <div class="col-md-4">
             </div>
         </div>
-    </div>    
-            <!-- adding container for card elements to show Dailyforecasts -->
-            <div class="row row-cols-1 row-cols-md-5 g-4 forecasts">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="list-unstyled">
+                    <li class="list-item">
+                        Lorem ipsum dolor sit amet
+                    </li>
+                    <li class="list-item">
+                        Consectetur adipiscing elit
+                    </li>
+                    <li class="list-item">
+                        Integer molestie lorem at massa
+                    </li>
+                    <li class="list-item">
+                        Facilisis in pretium nisl aliquet
+                    </li>
+                    <li class="list-item">
+                        Nulla volutpat aliquam velit
+                    </li>
+                    <li class="list-item">
+                        Faucibus porta lacus fringilla vel
+                    </li>
+                    <li class="list-item">
+                        Aenean sit amet erat nunc
+                    </li>
+                    <li class="list-item">
+                        Eget porttitor lorem
+                    </li>
+                </ul>
+            </div>
+            <div class="container col-md-6">
+                <div class="card shadow-lg rounded d-none">
+                    <img src="https://via.placeholder.com/400x300" class="time card-img-top">
+                    <div class="icon bg-warning mx-auto text-center">
+                        <img src="" alt="">
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
+                    <div class="iconUv mx-auto text-center">
+                        <img src="" alt="">
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
+                    <div class="text-muted text-uppercase text-center details">
                     </div>
                 </div>
             </div>
-           
+            <!-- adding div for forecasts -->
+            <div class="col-md-4 forecasts">
+                <div class="card">
+                    <h5 class="card-header">
+                        Card title
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Card content
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header">
+                        Card title
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Card content
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header">
+                        Card title
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Card content
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header">
+                        Card title
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Card content
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header">
+                        Card title
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Card content
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
+            </div>
         </div>
-
-
     </div>
-
-    <!-- cards for 5 day forecast  -->
-
-
 
     <!-- adding script file links  -->
     <script src="./Assets/js/weathercheck.js"></script>
