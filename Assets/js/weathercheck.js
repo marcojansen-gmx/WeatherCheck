@@ -37,24 +37,3 @@ const getWeather = async (cityKey) => {
     console.log(data[0]);
     return data[0];
   };
-
-  
-
-  
-// kan uitvee
-// getCity('Manchester').then(data => {
-//      return getWeather(data.Key)   
-//     }).then(data => {
-//         console.log(data);
-//     }).catch(err =>  console.log(err));
-
-
-// Resource URL for UV query
-// http://dataservice.accuweather.com/indices/v1/daily/1day/{locationKey}/groups/{ID}
-
-// {
-//     "Name": "UV Index",
-//     "ID": -15,
-//     "Ascending": true,
-//     "Description": "The AccuWeather.com UV Index forecasts localized ultraviolet radiation conditions. It is updated every hour and indicates how much sun protection you need for your outdoor activities."
-//   },

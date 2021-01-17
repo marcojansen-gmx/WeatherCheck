@@ -15,7 +15,7 @@ body{
 } */
 .forecasts{
     max-width: 375px;
-    min-width: 150px;
+    min-width: 375px;
 }
 .icon{
     position: relative;
@@ -42,3 +42,6 @@ body{
 .enter-city-col{
     min-width: 375px;
 }
+/* .smlCard{
+
+} */

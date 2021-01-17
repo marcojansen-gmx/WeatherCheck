@@ -11,10 +11,9 @@ const icon = document.querySelector('.icon img');
 const iconUv = document.querySelector('.iconUv img')
 
 
-
+// working with the date
 const today = new Date();
-
-// // Getting required values
+// Getting required values
 const year = today.getFullYear();
 const month = today.getMonth() +1;
 const day = today.getDate();
@@ -23,7 +22,6 @@ const day2 = today.getDate() +2;
 const day3 = today.getDate() +3;
 const day4 = today.getDate() +4;
 const day5 = today.getDate() +5;
-console.log(year, month, day, day1, day2, day3, day4, day5);
 
 //func to update  UI
 const updateUI = (data) => {
@@ -55,8 +53,7 @@ const updateUI = (data) => {
     let timeSrc = weatherDetails.IsDayTime ? 'Assets/graphics/images/day.svg' : 'Assets/graphics/images/night.svg';
     time.setAttribute('src', timeSrc);
     
-    console.log(cityDetails, weatherDetails, forecastDetails, forecastDetails.DailyForecasts[0].Temperature.Maximum.Value, forecastDetails.DailyForecasts[0].Day.Icon, forecastDetails.DailyForecasts[0].Day.Wind.Speed.Value );
-    
+    // setting forecast items     
     forecasts.innerHTML = `
     <div class="card">
         <h3 class="card-header"> 5 Day Forecast </h3>
