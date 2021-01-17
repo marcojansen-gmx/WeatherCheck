@@ -5,16 +5,16 @@ body{
     font-size: 0.8em;
 }
 .container{
-    max-width: 300px;
-    min-width: 300px;
+    max-width: 375px;
+    min-width: 375px;
 }
 
 /*.card{
     max-width: 300px;
     min-width: 300px;
 } */
-.forecastsCard{
-    max-width: 100px;
+.forecasts{
+    max-width: 375px;
     min-width: 150px;
 }
 .icon{
@@ -38,4 +38,7 @@ body{
     width: 100px;
     height: 100px;
     background-color: white;
+}
+.enter-city-col{
+    min-width: 375px;
 }

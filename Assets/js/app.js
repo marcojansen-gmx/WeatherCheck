@@ -10,6 +10,21 @@ const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
 const iconUv = document.querySelector('.iconUv img')
 
+
+
+const today = new Date();
+
+// // Getting required values
+const year = today.getFullYear();
+const month = today.getMonth() +1;
+const day = today.getDate();
+const day1 = today.getDate() +1;
+const day2 = today.getDate() +2;
+const day3 = today.getDate() +3;
+const day4 = today.getDate() +4;
+const day5 = today.getDate() +5;
+console.log(year, month, day, day1, day2, day3, day4, day5);
+
 //func to update  UI
 const updateUI = (data) => {
     // const cityDetails = data.cityDetails;
@@ -44,75 +59,80 @@ const updateUI = (data) => {
     
     forecasts.innerHTML = `
     <div class="card">
-    <h5 style="padding: 20px"> 5 Day Forecast </h5>
-                    <h5 class="card-header">
-                        Card title 1
-                    </h5>
-                    <div class="card-body">
-                        <p class="card-text">
-                            MAX ${forecastDetails.DailyForecasts[0].Temperature.Maximum.Value} &deg;C
-                            <br>
-                            <div><img src="Assets/graphics/icons/${forecastDetails.DailyForecasts[0].Day.Icon}.svg"></div>
-                            <br>
-                            ${forecastDetails.DailyForecasts[0].Day.ShortPhrase}
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <div><img src="Assets/graphics/icons/UV/${forecastDetails.DailyForecasts[0].AirAndPollen[5].CategoryValue}.svg" class="smallIcon"></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="card-header">
-                        Card title 2
-                    </h5>
-                    <div class="card-body">
-                        <p class="card-text">
-                        MAX ${forecastDetails.DailyForecasts[1].Temperature.Maximum.Value} &deg;C
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        Card footer
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="card-header">
-                        Card title 3
-                    </h5>
-                    <div class="card-body">
-                        <p class="card-text">
-                        MAX ${forecastDetails.DailyForecasts[2].Temperature.Maximum.Value} &deg;C
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        Card footer
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="card-header">
-                        Card title 4
-                    </h5>
-                    <div class="card-body">
-                        <p class="card-text">
-                        MAX ${forecastDetails.DailyForecasts[3].Temperature.Maximum.Value} &deg;C
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        Card footer
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="card-header">
-                        Card title 5
-                    </h5>
-                    <div class="card-body">
-                        <p class="card-text">
-                        MAX ${forecastDetails.DailyForecasts[4].Temperature.Maximum.Value} &deg;C
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        Card footer
-                    </div>
-                </div>
+        <h3 class="card-header"> 5 Day Forecast </h3>
+        <h5 class="card-header"> Forecast: ${year} / ${month} / ${day1} </h5>
+        <div class="card-body">
+            <p class="card-text">
+                MAX ${forecastDetails.DailyForecasts[0].Temperature.Maximum.Value} &deg;C
+                <br>
+                <div><img src="Assets/graphics/icons/${forecastDetails.DailyForecasts[0].Day.Icon}.svg"></div>
+                <br>
+                ${forecastDetails.DailyForecasts[0].Day.ShortPhrase}
+            </p>
+        </div>
+        <div class="card-footer">
+            <div><img src="Assets/graphics/icons/UV/${forecastDetails.DailyForecasts[0].AirAndPollen[5].CategoryValue}.svg" class="smallIcon"></div>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header"> Forecast: ${year} / ${month} / ${day2} </h5>
+        <div class="card-body">
+            <p class="card-text">
+                MAX ${forecastDetails.DailyForecasts[1].Temperature.Maximum.Value} &deg;C
+                <br>
+                <div><img src="Assets/graphics/icons/${forecastDetails.DailyForecasts[1].Day.Icon}.svg"></div>
+                <br>
+                ${forecastDetails.DailyForecasts[1].Day.ShortPhrase}
+            </p>
+        </div>
+        <div class="card-footer">
+            <div><img src="Assets/graphics/icons/UV/${forecastDetails.DailyForecasts[1].AirAndPollen[5].CategoryValue}.svg" class="smallIcon"></div>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header"> Forecast: ${year} / ${month} / ${day3} </h5>
+        <div class="card-body">
+            <p class="card-text">
+                MAX ${forecastDetails.DailyForecasts[2].Temperature.Maximum.Value} &deg;C
+                <br>
+                <div><img src="Assets/graphics/icons/${forecastDetails.DailyForecasts[2].Day.Icon}.svg"></div>
+                <br>
+                ${forecastDetails.DailyForecasts[2].Day.ShortPhrase}
+            </p>
+        </div>
+        <div class="card-footer">
+            <div><img src="Assets/graphics/icons/UV/${forecastDetails.DailyForecasts[2].AirAndPollen[5].CategoryValue}.svg" class="smallIcon"></div>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header"> Forecast: ${year} / ${month} / ${day4} </h5>
+        <div class="card-body">
+            <p class="card-text">
+                MAX ${forecastDetails.DailyForecasts[3].Temperature.Maximum.Value} &deg;C
+                <br>
+                <div><img src="Assets/graphics/icons/${forecastDetails.DailyForecasts[3].Day.Icon}.svg"></div>
+                <br>
+                ${forecastDetails.DailyForecasts[3].Day.ShortPhrase}
+            </p>
+        </div>
+        <div class="card-footer">
+            <div><img src="Assets/graphics/icons/UV/${forecastDetails.DailyForecasts[3].AirAndPollen[5].CategoryValue}.svg" class="smallIcon"></div>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header"> Forecast: ${year} / ${month} / ${day5} </h5>
+        <div class="card-body">
+            <p class="card-text">
+                MAX ${forecastDetails.DailyForecasts[4].Temperature.Maximum.Value} &deg;C
+                <br>
+                <div><img src="Assets/graphics/icons/${forecastDetails.DailyForecasts[4].Day.Icon}.svg"></div>
+                <br>
+                ${forecastDetails.DailyForecasts[4].Day.ShortPhrase}
+            </p>
+        </div>
+        <div class="card-footer">
+        <div><img src="Assets/graphics/icons/UV/${forecastDetails.DailyForecasts[4].AirAndPollen[5].CategoryValue}.svg" class="smallIcon"></div>
+    </div>
     `
                             
 
