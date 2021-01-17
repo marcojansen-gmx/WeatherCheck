@@ -16,7 +16,7 @@ const updateUI = (data) => {
     // destructure properties
     const { cityDetails, weatherDetails } = data;
     
-    // update the details on the card
+    // update the details on the main card
     details.innerHTML = `
     <h5 class="my-3">${cityDetails.EnglishName}</h5>
     <div class="my-3">${weatherDetails.WeatherText}</div>
@@ -28,7 +28,7 @@ const updateUI = (data) => {
     <div class="my-3">WIND SPEED ${weatherDetails.Wind.Speed.Metric.Value}km/h</div>
     `;
     
-    //icon for wesather conditions
+    //icon for weather conditions
     const iconSrc = `Assets/graphics/icons/${weatherDetails.WeatherIcon}.svg`;
     icon.setAttribute('src', iconSrc);
     //icon for UV Index
@@ -49,8 +49,8 @@ const updateUI = (data) => {
             
             const cityDetails = await getCity(city);
             const weatherDetails = await getWeather(cityDetails.Key);
-            const forecastDetails = await getForecast(cityDetails.Key)
-            console.log(cityDetails, weatherDetails, forecastDetails);
+            const forecastDetails = await getForecast(cityDetails.Key);
+            console.log(cityDetails, weatherDetails, forecastDetails, forecastDetails.DailyForecasts[0].Temperature.Maximum.Value, forecastDetails.DailyForecasts[0].Day.Icon, forecastDetails.DailyForecasts[0].Day.Wind.Speed.Value );
             return { cityDetails, weatherDetails, forecastDetails };
             
         };
