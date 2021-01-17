@@ -43,66 +43,76 @@ const updateUI = (data) => {
     console.log(cityDetails, weatherDetails, forecastDetails, forecastDetails.DailyForecasts[0].Temperature.Maximum.Value, forecastDetails.DailyForecasts[0].Day.Icon, forecastDetails.DailyForecasts[0].Day.Wind.Speed.Value );
     
     forecasts.innerHTML = `
-    <div class="col">
-        <div class="forecastsCard h-100">
-            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Date </h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>        
-    <div class="col">
-        <div class="forecastsCard h-100">
-            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Date </h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
-    <div class="col">
-        <div class="forecastsCard h-100">
-            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Date </h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
-    <div class="col">
-        <div class="forecastsCard h-100">
-            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Date </h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
-    <div class="col">
-        <div class="forecastsCard h-100">
-            <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="...">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Date </h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-    </div>
+    <div class="card">
+    <h5 style="padding: 20px"> 5 Day Forecast </h5>
+                    <h5 class="card-header">
+                        Card title 1
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                            MAX ${forecastDetails.DailyForecasts[0].Temperature.Maximum.Value} &deg;C
+                            <br>
+                            <div><img src="Assets/graphics/icons/${forecastDetails.DailyForecasts[0].Day.Icon}.svg"></div>
+                            <br>
+                            ${forecastDetails.DailyForecasts[0].Day.ShortPhrase}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div><img src="Assets/graphics/icons/UV/${forecastDetails.DailyForecasts[0].AirAndPollen[5].CategoryValue}.svg" class="smallIcon"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header">
+                        Card title 2
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                        MAX ${forecastDetails.DailyForecasts[1].Temperature.Maximum.Value} &deg;C
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header">
+                        Card title 3
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                        MAX ${forecastDetails.DailyForecasts[2].Temperature.Maximum.Value} &deg;C
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header">
+                        Card title 4
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                        MAX ${forecastDetails.DailyForecasts[3].Temperature.Maximum.Value} &deg;C
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header">
+                        Card title 5
+                    </h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                        MAX ${forecastDetails.DailyForecasts[4].Temperature.Maximum.Value} &deg;C
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
     `
                             
 

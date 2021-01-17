@@ -34,3 +34,8 @@ body{
     margin-bottom: -50px;
     background-color: white;
 }
+.card-footer{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
