@@ -6,6 +6,11 @@ body{
 }
 .container{
     max-width: 400px;
+    min-width: 300px;
+}
+.card{
+    max-width: 400px;
+    min-width: 300px;
 }
 .icon{
     position: relative;

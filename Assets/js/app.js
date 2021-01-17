@@ -49,7 +49,9 @@ const updateUI = (data) => {
             
             const cityDetails = await getCity(city);
             const weatherDetails = await getWeather(cityDetails.Key);
-            return { cityDetails, weatherDetails };
+            const forecastDetails = await getForecast(cityDetails.Key)
+            console.log(cityDetails, weatherDetails, forecastDetails);
+            return { cityDetails, weatherDetails, forecastDetails };
             
         };
         
