@@ -155,6 +155,8 @@ const updateUI = (data) => {
             
             // getting city value
             const city = cityForm.city.value.trim();
+            localStorage.setItem(city, city);
+
             // clear form
             cityForm.reset();
             
