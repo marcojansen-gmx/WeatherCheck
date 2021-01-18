@@ -3,7 +3,7 @@ const key = '1779CnY64TO8hddIeyMRKzbmbhAIM9AG';
 // function to get current weather information for city
 const getWeather = async (cityKey) => {
   
-    const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
+    const base = 'https://dataservice.accuweather.com/currentconditions/v1/';
     const query = `${cityKey}?apikey=${key}&details=true`;
   
     const response = await fetch(base + query);
@@ -16,7 +16,7 @@ const getWeather = async (cityKey) => {
   //function to get 5 Day forecast for city
   const getForecast = async (cityKey) => {
     
-    const base = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/';
+    const base = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/';
     const query = `${cityKey}?apikey=${key}&details=true&metric=true`;
   
     const response = await fetch(base + query);
@@ -28,7 +28,7 @@ const getWeather = async (cityKey) => {
   // function to get id for city - set city as paramater  - to obtain weather data
   const getCity = async (city) => {
     
-    const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
+    const base = 'https://dataservice.accuweather.com/locations/v1/cities/search';
     // build query to get city id using API key and city input
     const query = `?apikey=${key}&q=${city}`;
     // fetch resource (city id) and combine base and query together
